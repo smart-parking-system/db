@@ -9,6 +9,7 @@ CREATE TABLE IF NOT EXISTS lots (
   id          int           PRIMARY KEY NOT NULL,
   parking_id  int           NOT NULL,
   status      int           NOT NULL DEFAULT 0,
+  number_within_parking int NOT NULL,
 
   FOREIGN KEY (parking_id) REFERENCES parking(id)
 );
