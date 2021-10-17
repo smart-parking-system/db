@@ -5,7 +5,7 @@ CREATE TABLE IF NOT EXISTS parking (
   location    varchar(99)   NOT NULL
 );
 
-CREATE TABLE IF NOT EXISTS lots (
+CREATE TABLE IF NOT EXISTS lot (
   id          int           PRIMARY KEY NOT NULL,
   parking_id  int           NOT NULL,
   status      int           NOT NULL DEFAULT 0,
