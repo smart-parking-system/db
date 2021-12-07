@@ -1,4 +1,5 @@
+/* Clears tables */
 
-DROP TABLE IF EXISTS lot CASCADE;
-DROP TABLE IF EXISTS parking CASCADE;
+TRUNCATE TABLE lot;
+TRUNCATE TABLE parking;
 

@@ -1,3 +1,4 @@
+/* Create tables */
 
 CREATE TABLE IF NOT EXISTS parking (
   id          int           PRIMARY KEY NOT NULL,
@@ -7,10 +8,8 @@ CREATE TABLE IF NOT EXISTS parking (
 
 CREATE TABLE IF NOT EXISTS lot (
   id          int           PRIMARY KEY NOT NULL,
-  parking_id  int           NOT NULL,
+  parking_id  int           NOT NULL REFERENCES parking(id),
   status      int           NOT NULL DEFAULT 0,
-  internal_id int NOT NULL,
-
-  FOREIGN KEY (parking_id) REFERENCES parking(id)
+  internal_id int           NOT NULL
 );
 
